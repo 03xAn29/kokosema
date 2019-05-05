@@ -1,0 +1,12 @@
+<template>
+  <div class="header-main-footer">
+    <require from="./app.css"></require>
+    <compose view="./header/header.html"></compose>
+    <ul repeat.for="nav of router.navigation">
+        <li class="${nav.isActive ? 'active' : ''}"><a href.bind="nav.href">${nav.title}</a></li>
+    </ul>
+    <router-view></router-view>
+    <!--<compose view="./article/article.html"></compose>-->
+    <compose view="./footer/footer.html"></compose>
+  </div>
+</template>
