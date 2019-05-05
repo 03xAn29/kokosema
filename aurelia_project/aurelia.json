@@ -26,7 +26,8 @@
   },
   "cssProcessor": {
     "source": [
-      "src/**/*.scss"
+      "src/**/*.scss",
+      "src/**/*.sass"
     ]
   },
   "jsonProcessor": {

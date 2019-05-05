@@ -32249,11 +32249,32 @@ function _aureliaConfigureModuleLoader(){window.define=SystemJS.amdDefine; windo
   "bundles": {
     "app-bundle": [
       "app",
+      "app.css!text",
       "app.html!text",
+      "article/article.css!text",
+      "article/article.html!text",
       "environment",
+      "footer/footer.css!text",
+      "footer/footer.html!text",
+      "header/header.css!text",
+      "header/header.html!text",
+      "index",
+      "index.html!text",
       "main",
+      "profile/alt/akeboshi-rin.html!text",
+      "profile/alt/kashiwagi-meguri.html!text",
+      "profile/alt/luna-shannon.html!text",
+      "profile/alt/mizugashi-yuzu.html!text",
+      "profile/alt/profiles.html!text",
+      "profile/alt/takamine-setsuna.html!text",
+      "profile/ctrl/profiles.html!text",
       "resources",
-      "resources/index"
+      "resources/index",
+      "story/story",
+      "story/story.css!text",
+      "story/story.html!text",
+      "story/we-are-alt.html!text",
+      "story/we-are-ctrl.html!text"
     ]
   }
 });}
