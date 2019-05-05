@@ -54,7 +54,7 @@ define('index',["require", "exports"], function (require, exports) {
 });
 ;
 define('index.css!text',[],function(){return "article {\n  min-height: 75vh;\n  width: 90%;\n  max-width: 1000px;\n  background-color: #eaf4fc;\n  margin: 10vh auto 5vh auto;\n  padding: 1vh 1vw 1vh 1vw; }\n";});;
-define('index.html!text',[],function(){return "<template>\r\n    <require from=\"./index.css\"></require>\r\n    <article>\r\n        トップページ\r\n    </article>\r\n</template>";});;
+define('index.html!text',[],function(){return "<template>\r\n    <require from=\"./index.css\"></require>\r\n    <article>\r\n        トップページ<br>\r\n        <a href=\"profile/alt\">数学部のみんな</a><br>\r\n        <a href=\"profile/ctrl\">コンピュータ技術研究会のみんな</a><br>\r\n        \r\n    </article>\r\n</template>";});;
 define('main',["require", "exports", "./environment", "core-js/stable"], function (require, exports, environment_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
