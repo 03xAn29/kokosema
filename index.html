@@ -5,6 +5,15 @@
     <title>Aurelia</title>
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+</script>
   </head>
 
   <body aurelia-app="main">
