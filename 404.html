@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>404</title>
-    <script>
-    sessionStorage.redirect = location.href;
-    </script>
-    <meta http-equiv="refresh" content="0;URL='/'"></meta>
-  </head>
 
-  <body>
-  now loading
-              
-              
-              
-              
-              
-              
-              
+<head>
+  <meta charset="utf-8">
+  <title>Aurelia</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-              
-              
-              
-              
-              
-              
-              
-              
-                     
-  </body>
+  <!-- 以下CC BY-SA 4.0 適用外 -->
+  <!-- 参考→ https://evansalter.com/blog/github-pages-and-single-page-apps -->
+  <!-- SPAのルーティングをGitHub Pagesで動作させるため -->
+  <script>
+    (function () {
+      const redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+  <!-- 以上CC BY-SA 4.0 適用外 -->
+</head>
+
+<body aurelia-app="main">
+  <script src="scripts/vendor-bundle.js"></script>
+  <script>SystemJS.import("aurelia-bootstrapper").catch(function (err) { console.log(err); })</script>
+</body>
+
 </html>
